@@ -12,4 +12,3 @@
   }
 }
 
-echo '{"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": {"name": "random_float"}}' | uv run --directory /Users/manuelmartinezflores/Documents/GitHub/random-mcp-server /Users/manuelmartinezflores/Documents/GitHub/random-mcp-server/mcp_http_bridge.py https://random-number-mcp-server.manuelalejandromartinezf.workers.dev

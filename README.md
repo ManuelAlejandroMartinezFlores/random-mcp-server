@@ -29,3 +29,13 @@ To use this, clone this repository, then add the dependencies, it is recommended
         "https://random-number-mcp-server.manuelalejandromartinezf.workers.dev"]
 }
 ```
+If one wants to request function calls without the SDK, one can use for example
+```bash
+curl -X POST https://random-number-mcp-server.manuelalejandromartinezf.workers.dev \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "random_choice", "arguments": {"choices": ["A", "B", "C"], "count": 2}}}'
+```
+that gets the output
+```
+{"jsonrpc": "2.0", "id": 2, "result": {"content": [{"type": "text", "text": "Random choices: A, B"}]}}
+```
