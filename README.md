@@ -23,9 +23,11 @@ Here’s a random probability: **0.8593**
 To use this, clone this repository, then add the dependencies, it is recommended to use `uv`. Then, you can use Anthropic's SDK with the following configuration:
 ```json
 {
-    command: "uv",
-    args: ["run", "--directory", "/PATH/TO/REPO",
+    "command": "uv",
+    "args": [
+        "run", "--directory", "/PATH/TO/REPO",
         "/PATH/TO/REPO/mcp_http_bridge.py",
-        "https://random-number-mcp-server.manuelalejandromartinezf.workers.dev"]
+        "https://random-number-mcp-server.manuelalejandromartinezf.workers.dev"
+    ]
 }
 ```
