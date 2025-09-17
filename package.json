@@ -12,6 +12,4 @@
   }
 }
 
-curl -X POST https://random-number-mcp-server.manuelalejandromartinezf.workers.dev \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "random_choice", "arguments": {"choices": ["A", "B", "C"], "count": 2}}}'
+echo '{"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": {"name": "random_float"}}' | uv run --directory /Users/manuelmartinezflores/Documents/GitHub/random-mcp-server /Users/manuelmartinezflores/Documents/GitHub/random-mcp-server/mcp_http_bridge.py https://random-number-mcp-server.manuelalejandromartinezf.workers.dev
