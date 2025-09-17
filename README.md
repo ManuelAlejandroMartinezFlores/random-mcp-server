@@ -23,12 +23,15 @@ Here’s a random probability: **0.8593**
 To use this, clone this repository, then add the dependencies, it is recommended to use `uv`. Then, you can use Anthropic's SDK with the following configuration:
 ```json
 {
-    command: "uv",
-    args: ["run", "--directory", "/PATH/TO/REPO",
+    "command": "uv",
+    "args": [
+        "run", "--directory", "/PATH/TO/REPO",
         "/PATH/TO/REPO/mcp_http_bridge.py",
-        "https://random-number-mcp-server.manuelalejandromartinezf.workers.dev"]
+        "https://random-number-mcp-server.manuelalejandromartinezf.workers.dev"
+    ]
 }
 ```
+
 If one wants to request function calls without the SDK, one can use for example
 ```bash
 curl -X POST https://random-number-mcp-server.manuelalejandromartinezf.workers.dev \
@@ -39,3 +42,4 @@ that gets the output
 ```
 {"jsonrpc": "2.0", "id": 2, "result": {"content": [{"type": "text", "text": "Random choices: A, B"}]}}
 ```
+
