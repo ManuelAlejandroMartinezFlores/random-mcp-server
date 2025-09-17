@@ -1,0 +1,17 @@
+{
+  "name": "random-number-mcp-server",
+  "version": "1.0.0", 
+  "description": "MCP server for random number generation deployed on Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
+
+curl -X POST https://random-number-mcp-server.manuelalejandromartinezf.workers.dev \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "id": 2, "method": "tools/call", "params": {"name": "random_choice", "arguments": {"choices": ["A", "B", "C"], "count": 2}}}'
